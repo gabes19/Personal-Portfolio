@@ -79,7 +79,7 @@
     gap: 0.5rem;
     text-align: center;
   }
-  .section_pic_container{
+  .section_pic_container {
     width: auto;
     height: 46vw;
     justify-content: center;
@@ -87,11 +87,10 @@
   .section_text_p2 {
     font-size: 1.25rem;
   }
-  .title{
-    font-size:2rem;
+  .title {
+    font-size: 2rem;
   }
-  .text-container{
+  .text-container {
     text-align: justify;
   }
-  }
-
+}
