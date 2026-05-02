@@ -195,6 +195,13 @@ section {
   margin: auto 0;
 }
 
+#profile .section_pic_container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 .section_text {
   align-self: center;
   text-align: center;
@@ -232,6 +239,22 @@ section {
   cursor: pointer;
   height: 2rem;
   filter: brightness(0) invert(1);
+}
+
+.company-logo {
+  height: 2.75rem;
+  width: auto;
+  filter: none;
+  display: inline-block;
+  margin: 0.35rem 0.25rem 0 0.25rem;
+  vertical-align: middle;
+}
+
+.round-logo {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 /* Buttons */
@@ -351,6 +374,65 @@ section {
   flex-direction: column;
 }
 
+.resume-container {
+  text-align: left;
+}
+
+.resume-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.resume-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.25rem;
+  align-items: start;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.resume-item:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.resume-logo-wrap {
+  width: 6.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.35rem;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+}
+
+.resume-logo-wrap .company-logo {
+  margin: 0;
+}
+
+.resume-header h3 {
+  color: var(--text-color);
+  font-size: 1.15rem;
+  margin-bottom: 0.2rem;
+}
+
+.resume-company {
+  color: var(--highlight-color);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.resume-bullets {
+  margin-left: 1.1rem;
+  color: var(--muted-text);
+}
+
+.resume-bullets li {
+  line-height: 1.6;
+}
+
 .article-container {
   display: flex;
   text-align: initial;
@@ -376,6 +458,22 @@ article.icon {
   position: relative;
 }
 
+#projects .about-containers {
+  align-items: stretch;
+}
+
+#projects .details-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 32rem;
+}
+
+#projects .article-container {
+  display: block;
+  width: 100%;
+  margin-bottom: 1.25rem;
+}
+
 .color-container {
   border-color: var(--border-color);
   background: var(--surface-strong);
@@ -384,18 +482,37 @@ article.icon {
 .project-img {
   border-radius: 2rem;
   width: 100%;
-  height: 90%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
   box-shadow: 0 20px 45px var(--shadow-color);
 }
 
 .project-title {
-  margin: 1rem;
+  margin: 0 0 1rem;
   color: var(--text-color);
+  font-size: clamp(1.05rem, 1.25vw, 1.45rem);
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project-description {
+  color: var(--muted-text);
+  font-size: 0.98rem;
+  line-height: 1.55;
+  margin: 0;
+  text-align: center;
 }
 
 .project-btn {
   color: var(--text-color);
   border-color: var(--border-color);
+}
+
+#projects .btn-container {
+  margin-top: auto;
+  padding-top: 1rem;
 }
 
 /** CONTACT SECTION */

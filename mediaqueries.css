@@ -93,4 +93,13 @@
   .text-container {
     text-align: justify;
   }
+
+  .resume-item {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .resume-logo-wrap {
+    justify-content: flex-start;
+  }
 }
